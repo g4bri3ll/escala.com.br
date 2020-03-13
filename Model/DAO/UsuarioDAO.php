@@ -1025,13 +1025,12 @@ class UsuarioDAO {
 		
 		$mydb = mysqli_select_db($conn->getCon(), $conn->getBD());
 		//Montar o sql
-		$sql = "SELECT u.id, u.nivel_acesso, ut.nome as unidade_trabalho, iutu.id_unidade_trabalho FROM usuario u 
+		$sql = "SELECT u.id, u.nivel_acesso, ut.nome as unidade_trabalho, ut.id as id_unidade_trabalho FROM usuario u 
 				INNER JOIN ativacao_usuario au ON(u.id = au.id_usuario)
-				INNER JOIN id_unidade_trabalho_usuario iutu ON(u.id = iutu.id_usuario)
-				INNER JOIN unidade_trabalho ut ON(iutu.id_unidade_trabalho = ut.id)
+				INNER JOIN unidade_trabalho ut ON(u.id_unidade_trabalho = ut.id)
 				WHERE u.cpf = '".$cpf."' 
 				AND u.senha = '".md5($senha)."' 
-				AND iutu.id_unidade_trabalho = '".$idUnidade."'
+				AND ut.id = '".$idUnidade."'
 				AND au.estado_ativado = 'ativado'";
         
 		//executar o sql

@@ -1,4 +1,4 @@
-w<?php
+<?php
 session_start();
 //Nessa chasse ela descrever quais são as regras para cada setor fazer o seu cadastro de horas
 
