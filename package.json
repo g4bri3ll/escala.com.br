@@ -1,0 +1,19 @@
+{
+  "name": "escala",
+  "version": "1.0.0",
+  "description": "Sistema de escala de trabalho",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g4bri3ll/escala.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g4bri3ll/escala/issues"
+  },
+  "homepage": "https://github.com/g4bri3ll/escala#readme"
+}
